@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+}
+/* Set height of the message area */
+.message-area {
+    height: 400px;
+    overflow-y: auto;
+}
+/* Style for chat messages */
+.chat-message {
+    padding: 0 .5rem;
+    text-align: right;
+    font-size: 15px;
+}
+.chat-message.other {
+    text-align: left;
+}
+.chat-message > small {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0;
+}
+/* Style for friends list */
+.users-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.users-list li:hover {
+    background-color: lightslategray;
+    cursor: pointer;
+}
+.user {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+.user:last-child {
+    border-bottom: none;
+}
+.user:hover {
+    background-color: #f8f9fa;
+}
+.user.active {
+    background-color: #007bff;
+    color: #fff;
+}
+/* Style for call icon */
+.call-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.call-icons i {
+    font-size: 1rem;
+    margin-right: 5px;
+    transition: color 0.3s;
+    padding: .5rem;
+    border-radius: 5px;
+}
+.call-icons i:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+.separator {
+    margin: 0;
+    padding: 0 .7rem
+}
+.table-custom {
+    color: #333;
+    font-size: 0.9rem;
+}
+.table-custom thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+.table-custom tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+.table-custom tbody tr:hover {
+    background-color: #f1f1f1;
+}
+#video-call:disabled,
+#voice-call:disabled {
+    background-color: gray;
+}
+#video-call:not(:disabled):hover,
+#voice-call:not(:disabled):hover {
+    color: dimgray;
+}
+.profile-settings div:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+.profile-settings div i, .profile-settings div small{
+    font-size: 19px;
+}
+.profile-info strong {
+    font-size: 12px;
+}
+.profile-info small {
+    display:block;
+    width:100%;
+    font-size: 11px;
+}
+.profile-info:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+.list-group {
+    border-radius: 0;
+    border-color: transparent
+}
+#friend-list li:hover {
+    cursor: pointer;
+}
+#guest-list li > span:hover {
+    cursor: pointer;
+}
+#chat-typing {
+    left: 5px;
+    bottom: 60px;
+    z-index: 2;
+}
+#chat-typing small {
+    font-size: 11px;
+}
+#localVideo, #remoteVideo {
+    height: 150px;
+    width: 200px
+}
+.display-none {
+    display: none;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+    z-index: 1050; /* Ensure the overlay is above other content */
+}
