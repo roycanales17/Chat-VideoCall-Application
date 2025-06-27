@@ -1,23 +1,30 @@
-const server_name = 'localhost';
+const frontend = "https://127.0.0.1:3000";
+const server_host = 'localhost';
+const server_port = 3030;
+
 const https = require('https');
 const fs = require('fs');
-const socketIO = require( 'socket.io' );
+const socketIO = require('socket.io');
+
 const server = https.createServer({
-	key: fs.readFileSync( `../certs/${server_name}-key.pem`),
-	cert: fs.readFileSync( `../certs/${server_name}.pem`)
-}, ( req, res ) => {
-	res.writeHead( 200, { 'Content-Type': 'text/plain' });
-	res.end( 'Hello, World!\n' );
+	key: fs.readFileSync(`certs/localhost-key.pem`),
+	cert: fs.readFileSync(`certs/localhost.pem`)
+}, (req, res) => {
+	res.writeHead(200, { 'Content-Type': 'text/plain' });
+	res.end('Hello, World!\n');
 });
-const io = socketIO( server, {
+
+const io = socketIO(server, {
 	cors: {
-		origin: `https://${server_name}:80`,
+		origin: frontend,
 		methods: ['GET', 'POST']
 	}
 });
-server.listen( 3000, server_name, () => {
-	console.log(`Server running at https://${server_name}:3000/`);
+
+server.listen(server_port, server_host, () => {
+	console.log(`Server running at https://${server_host}:${server_port}/`);
 });
+
 let users = {};
 let object = {
 	removeUser: ( id ) => delete users[ id ],
@@ -75,9 +82,6 @@ let object = {
 	},
 };
 
-server.close( () => {
-	console.log( "Closing server port 3000." );
-});
 io.on( 'connection' , socket => {
 	
 	socket.on( 'new-user', user => {

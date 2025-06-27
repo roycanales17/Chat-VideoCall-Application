@@ -1,17 +1,19 @@
 {
   "name": "p2p",
   "version": "1.0.0",
-  "description": "",
+  "description": "The project is a peer-to-peer (P2P) chat and video call application built using modern web technologies. It enables users to communicate in real-time without the need for a centralized server, providing a secure and private communication channel.",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^4.7.4"
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
-  }
+  },
+  "keywords": []
 }

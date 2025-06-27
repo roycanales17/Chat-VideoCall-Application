@@ -1,4 +1,6 @@
-const server_name = 'localhost';
+const server_host = 'localhost';
+const server_port = 3030;
+
 const app = {
 	media: {
 		pc: null,
@@ -605,7 +607,7 @@ while ( !UserName ) {
 	}
 }
 
-const socket = io( `https://${server_name}:3000` );
+const socket = io( `https://${server_host}:${server_port}` );
 app.chat.user.token = app.func.generateToken( 50 );
 app.chat.user.name = UserName;
 app.init();
