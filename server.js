@@ -1,4 +1,4 @@
-const frontend = "https://127.0.0.1:3000";
+const frontend = "https://localhost:3000";
 const server_host = 'localhost';
 const server_port = 3030;
 

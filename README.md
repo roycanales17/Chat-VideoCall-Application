@@ -18,6 +18,6 @@ node server.js
 ## Serve the Application
 Serve the frontend with a self-signed SSL certificate:
 ```cli
-http-server . -p 3000 -a 0.0.0.0 --ssl --cert certs/localhost.pem --key certs/localhost-key.pem
+http-server . -p 3000 -a localhost --ssl --cert certs/localhost.pem --key certs/localhost-key.pem
 ```
 **Note: The certificates used here are self-signed and intended for development/testing purposes only.**
