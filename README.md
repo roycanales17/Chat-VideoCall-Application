@@ -1,6 +1,6 @@
 ## Chat & Video Call System
 
-This project is a peer-to-peer (P2P) chat and video call demo built with modern web technologies, including Socket.IO and Node.js. It showcases real-time communication between users without the need for a centralized server, highlighting how secure and private conversations can be achieved through direct browser-to-browser connections.
+This project is a peer-to-peer (P2P) chat and video call demo built with modern web technologies, including `Socket.IO` and `Node.js`. It showcases real-time communication between users without the need for a centralized server.
 
 ## Prerequisites
 Before running the application, make sure the following packages are installed. You may need to use `sudo` depending on your system permissions.
