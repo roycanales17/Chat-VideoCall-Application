@@ -3,21 +3,20 @@
 This project is a peer-to-peer (P2P) chat and video call application built using modern web technologies. It allows users to communicate in real time without relying on a centralized server, ensuring secure and private conversations.
 
 ## Prerequisites
-Install the required global package:
+Before running the application, make sure the following packages are installed. You may need to use `sudo` depending on your system permissions.
 ```cli
 npm install
+npm install --save-dev concurrently
 npm install -g http-server 
 ```
 
-## Run the Socket Server
-Start the WebSocket server:
-```cli
-node server.js
-```
-
 ## Serve the Application
-Serve the frontend with a self-signed SSL certificate:
+Start both the backend server and the frontend with HTTPS support using:
 ```cli
-http-server . -p 3000 -a localhost --ssl --cert certs/localhost.pem --key certs/localhost-key.pem
+npm run serve
 ```
-**Note: The certificates used here are self-signed and intended for development/testing purposes only.**
+This command:
+- Runs the Node.js backend (`server.js`)
+- Serves the frontend via `http-server` over HTTPS using a self-signed SSL certificate
+
+**Note: The SSL certificates provided are self-signed and should only be used for local development or testing purposes. Browsers may display a warning that you'll need to manually bypass.**
