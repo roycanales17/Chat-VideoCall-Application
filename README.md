@@ -1,6 +1,13 @@
-## Chat & Video Call System
+# Chat & Video Call System
 
 This project is a peer-to-peer (P2P) chat and video call demo built with modern web technologies, including `Socket.IO` and `Node.js`. It showcases real-time communication between users without the need for a centralized server.
+
+## Quick Start
+To scaffold a new project using the CLI tool:
+```cli
+npx roy404-chat-video-p2p-app project-name
+```
+Replace `project-name` with your desired directory name.
 
 ## Prerequisites
 Before running the application, make sure the following packages are installed. You may need to use `sudo` depending on your system permissions.
